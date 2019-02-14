@@ -12,7 +12,7 @@
 	'DefaultAddress':"222 W Hargett St",
 
 	//URL to the ArcGIS Server REST endpoint of a geocoding service.
-	'Locator' : "https://maps.raleighnc.gov/ArcGIS/rest/services/Locators/Locator/GeocodeServer",
+	'Locator' : "https://maps.raleighnc.gov/arcgis/rest/services/Locators/CompositeLocator/GeocodeServer",
 	//"http://tasks.arcgisonline.com/ArcGIS/rest/services/Locators/TA_Address_NA/GeocodeServer",
 
 	//Define fields to use for address geocoding. Multi-field input for address geocoding, define four fields i.e. "Address,City,State,Zip" (supported by ArcGIS 9.X and 10 geocoding services).
@@ -22,13 +22,13 @@
 	'FindTaskLayer':"https://maps.raleighnc.gov/ArcGIS/rest/services/Parks/ParkLocator/MapServer",
 
 	//URL used for doing query task on the features.
-	'DevPlanLayer' : "https://maps.raleighnc.gov/ArcGIS/rest/services/Parks/ParkLocator/MapServer/0",
+	'DevPlanLayer': "https://services.arcgis.com/v400IkDOw1ad7Yad/ArcGIS/rest/services/Park_Locator_Service/FeatureServer/0",
 
 	//URL used used for drawing the route between two points.
 	'RouteMapURL' : "https://route.arcgis.com/arcgis/rest/services/World/Route/NAServer/Route_World/solve",
 
 	//URL to the ArcGIS Server REST resource used to perform geometry actions.
-	'GeometryService' : "https://maps.raleighnc.gov/ArcGIS/rest/services/Utilities/Geometry/GeometryServer",
+	'GeometryService' : "https://maps.raleighnc.gov/arcgis/rest/services/Utilities/Geometry/GeometryServer",
 
 	//Always any one should be true in the below two keys for default searching.
 	'DefaultSearch':[
@@ -124,14 +124,14 @@
 
 	//Basemap layer collection. (All the basemap’s need to be in the same spatial reference)
 	'BaseMapLayers' : [
-				{"Key": "topoMap", "ThumbnailSource": "images/basemap.jpg", "Name" : "Street Map", MapURL: "https://maps.raleighnc.gov/ArcGIS/rest/services/BaseMapMobile/MapServer"},
-				{"Key": "imageryMap2013", "ThumbnailSource": "images/aerials.jpg", "Name" : "2013 Imagery", MapURL: "https://maps.raleighnc.gov/ArcGIS/rest/services/Orthos10/Orthos2013/ImageServer"}
+				{"Key": "topoMap", "ThumbnailSource": "images/basemap.jpg", "Name" : "Street Map", MapURL: "https://maps.raleighnc.gov/arcgis/rest/services/BaseMap/MapServer"},
+				{"Key": "imageryMap2013", "ThumbnailSource": "images/aerials.jpg", "Name" : "2013 Imagery", MapURL: "https://maps.raleighnc.gov/images/rest/services/Orthos2013/ImageServer"}
 			],
 	'OperationalLayers' : [
-		{"Key": "amenities_buildings", "Name": "Amenities (Buildings)", "Type": "feature", "Visible": "true", MapURL: "https://maps.raleighnc.gov/ArcGIS/rest/services/Parks/ParkLocator/MapServer/2"},
-		{"Key": "amenities_outdoor", "Name": "Amenities (Outdoor)", "Type": "feature", "Visible": "true", MapURL: "https://maps.raleighnc.gov/ArcGIS/rest/services/Parks/ParkLocator/MapServer/3"},
-		{"Key": "labels", "Name": "Labels", "Type": "tiled", "Visible": "false", MapURL: "https://maps.raleighnc.gov/ArcGIS/rest/services/Labels/MapServer"},
-		{"Key": "greenways", "Name": "Greenways", "Type": "dynamic", "Visible": "false", MapURL: "https://maps.raleighnc.gov/ArcGIS/rest/services/Parks/Greenway/MapServer", "VisibleLayers": "0,1"}
+		{"Key": "amenities_buildings", "Name": "Amenities (Buildings)", "Type": "feature", "Visible": "true", MapURL: "https://services.arcgis.com/v400IkDOw1ad7Yad/ArcGIS/rest/services/Park_Locator_Service/FeatureServer/1"},
+		{"Key": "amenities_outdoor", "Name": "Amenities (Outdoor)", "Type": "feature", "Visible": "true", MapURL: "https://services.arcgis.com/v400IkDOw1ad7Yad/ArcGIS/rest/services/Park_Locator_Service/FeatureServer/2"},
+		{"Key": "labels", "Name": "Labels", "Type": "tiled", "Visible": "false", MapURL: "https://maps.raleighnc.gov/arcgis/rest/services/Labels/MapServer"},
+		{"Key": "greenways", "Name": "Greenways", "Type": "dynamic", "Visible": "false", MapURL: "https://maps.raleighnc.gov/arcgis/rest/services/Parks/Greenway/MapServer", "VisibleLayers": "0,1"}
 	],
 
 	//This consists of both tiny URL and social networking site URL.
